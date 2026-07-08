@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
     try {
         const { chatId, text } = req.body;
-        const botToken = 'AAEq8mVYFMda7oTNaOGvRupXdTaktN9qaDU'; // Ваш токен
+        const botToken = '8616159438:AAEq8mVYFMda7oTNaOGvRupXdTaktN9qaDU'; // ← ПРАВИЛЬНЫЙ ТОКЕН
 
         // Отправляем в Telegram
         const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
