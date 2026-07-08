@@ -1,0 +1,256 @@
+/* ================================
+   СТРАНИЦА ТОВАРА (КАК "О НАС")
+================================ */
+.product-page {
+    padding: 40px 0 80px;
+    min-height: 70vh;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn-back {
+    display: inline-block;
+    color: #166534;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    align-self: flex-start;
+    max-width: 900px;
+    width: 100%;
+}
+
+.btn-back:hover {
+    color: #2E7D32;
+    transform: translateX(-5px);
+}
+
+/* ===== СТЕКЛЯННЫЙ БЛОК (КАК НА "О НАС") ===== */
+.product-page-info {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-page-info h1 {
+    font-size: 36px;
+    color: #166534;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 3px solid rgba(76, 175, 80, 0.3);
+    padding-bottom: 20px;
+}
+
+.product-page-info .product-price-block {
+    background: rgba(76, 175, 80, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.product-page-info .price-big {
+    font-size: 32px;
+    font-weight: bold;
+    color: #166534;
+    display: block;
+}
+
+.product-page-info .price-note {
+    font-size: 14px;
+    color: #666;
+}
+
+.product-page-info .product-description p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+.product-page-info .product-description p:last-child {
+    margin-bottom: 0;
+}
+
+.product-page-info .product-composition,
+.product-page-info .product-characteristics,
+.product-page-info .product-dosage {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.product-page-info .product-composition h3,
+.product-page-info .product-characteristics h3,
+.product-page-info .product-dosage h3 {
+    font-size: 18px;
+    color: #166534;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+    padding-bottom: 10px;
+}
+
+.product-page-info .product-composition p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+.product-page-info .product-characteristics ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-page-info .product-characteristics ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+.product-page-info .product-characteristics ul li strong {
+    color: #166534;
+}
+
+.product-page-info .product-dosage p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #2c3e50;
+    text-align: justify;
+}
+
+.product-page-info .product-dosage p strong {
+    color: #166534;
+}
+
+/* ===== УПАКОВКА, СЕРВИС, АКЦИЯ, ПАТЕНТ ===== */
+.product-packaging,
+.product-service,
+.product-promo,
+.product-patent {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.product-packaging h3,
+.product-service h3,
+.product-promo h3 {
+    font-size: 18px;
+    color: #166534;
+    margin-bottom: 12px;
+    border-bottom: 2px solid rgba(76, 175, 80, 0.3);
+    padding-bottom: 10px;
+}
+
+.product-packaging ul,
+.product-service ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-packaging ul li,
+.product-service ul li {
+    padding: 6px 0;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+.product-packaging ul li::before,
+.product-service ul li::before {
+    content: "• ";
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.product-service ul ul {
+    padding-left: 25px;
+}
+
+.product-service ul ul li::before {
+    content: "— ";
+    color: #999;
+}
+
+.product-promo {
+    background: rgba(255, 243, 205, 0.6);
+    border: 2px solid rgba(255, 193, 7, 0.4);
+    border-radius: 12px;
+    padding: 18px 22px;
+}
+
+.product-promo h3 {
+    border-bottom-color: rgba(255, 193, 7, 0.4);
+    color: #856404;
+}
+
+.product-promo p {
+    font-size: 16px;
+    color: #856404;
+}
+
+.product-promo strong {
+    color: #d39e00;
+}
+
+.product-patent {
+    background: rgba(232, 245, 233, 0.6);
+    border: 2px solid rgba(76, 175, 80, 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.product-patent p {
+    font-size: 16px;
+    color: #166534;
+}
+
+/* ================================
+   АДАПТИВ
+================================ */
+@media (max-width: 768px) {
+    .product-page-info {
+        padding: 30px 25px;
+        margin: 20px 15px;
+    }
+    
+    .product-page-info h1 {
+        font-size: 28px;
+    }
+    
+    .product-page-info .price-big {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-page-info {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    .product-page-info h1 {
+        font-size: 22px;
+        padding-bottom: 12px;
+    }
+    
+    .product-page-info .product-description p,
+    .product-page-info .product-composition p,
+    .product-page-info .product-characteristics ul li,
+    .product-page-info .product-dosage p {
+        font-size: 14px;
+        text-align: left;
+    }
+}
