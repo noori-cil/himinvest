@@ -164,10 +164,10 @@ document.addEventListener('keydown', function(event) {
 });
 
 // ================================
-// TELEGRAM БОТ
+// TELEGRAM БОТ (ПРАВИЛЬНЫЙ ТОКЕН)
 // ================================
-const BOT_TOKEN = 'AAEq8mVYFMda7oTNaOGvRupXdTaktN9qaDU';
-const CHAT_ID = '932959007';
+const BOT_TOKEN = '8616159438:AAEq8mVYFMda7oTNaOGvRupXdTaktN9qaDU';  // ← ИСПРАВЛЕНО
+const CHAT_ID = '932959007';  // ← ТВОЙ CHAT_ID
 
 // ================================
 // ФОРМА ЗАКАЗА
