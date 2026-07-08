@@ -167,7 +167,7 @@ document.addEventListener('keydown', function(event) {
 // TELEGRAM БОТ
 // ================================
 const BOT_TOKEN = 'AAEq8mVYFMda7oTNaOGvRupXdTaktN9qaDU';
-const CHAT_ID = '8616159438';
+const CHAT_ID = '932959007';
 
 // ================================
 // ФОРМА ЗАКАЗА
