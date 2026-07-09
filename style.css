@@ -121,12 +121,13 @@ header .container {
 ================================ */
 .hero {
     height: 550px;
-    background: linear-gradient(rgba(137, 237, 137, 0.123), rgba(84, 134, 84, 0.6)),
-    url("images/hero1.jpg") center/cover;
+    background: linear-gradient(320deg,rgba(0, 255, 8, 0.088) 0%, rgba(255, 255, 255, 1) 76%),
+    url("images/hero1.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
-    color: white;
+    color: black;
     text-align: left;
+    justify-content: center;
 }
 
 .hero .container {
@@ -136,33 +137,82 @@ header .container {
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+
+.hero h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: green;
+    letter-spacing: 4px;
+    text-align: left;        /* ← ТЕКСТ СЛЕВА */
+    margin-left: 40px;
 }
 
 .hero p {
     font-size: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
+    line-height: 1.4;
+    opacity: 0.95;
+}
+
+/* ===== КНОПКИ ===== */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .btn {
-    background: #4CAF50;
+    background: green;
     color: white;
     text-decoration: none;
-    padding: 16px 40px;
+    padding: 14px 35px;
     border-radius: 6px;
     transition: .3s;
     font-size: 18px;
     display: inline-block;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #2E7D32;
+    background: white;           /* ← БЕЛЫЙ ФОН */
+    color: green;              /* ← ЗЕЛЁНЫЙ ТЕКСТ */
+    border-color: green;       /* ← ЗЕЛЁНАЯ ОБВОДКА */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
 }
+
+.btn-secondary {
+    background: white;           /* ← БЕЛЫЙ ФОН */
+    color: green;              /* ← ЗЕЛЁНЫЙ ТЕКСТ */
+    border: 2px solid green;   /* ← ЗЕЛЁНАЯ ОБВОДКА */
+    text-decoration: none;
+    padding: 14px 35px;
+    border-radius: 6px;
+    transition: .3s;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: green;         /* ← ПРИ НАВЕДЕНИИ СТАНОВИТСЯ ЗЕЛЁНОЙ */
+    color: white;
+    border-color: green;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(27, 94, 32, 0.3);
+}
+
 .card-btn {
     display: inline-block;
     background: #43A047;
@@ -196,7 +246,7 @@ section h2 {
 }
 .welcome-section {
     padding: 50px 0;
-    background: #f5f7fa;
+    background: none;
 }
 
 .welcome-content {
@@ -363,7 +413,7 @@ section h2 {
 }
 .useful-section {
     padding: 60px 0;
-    background: #f5f7fa;
+    background: none;
 }
 
 .useful-grid {
@@ -413,6 +463,7 @@ section h2 {
     max-width: 300px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-left: 30px;
 }
 
 /* ===== ПРАВАЯ КОЛОНКА ===== */
@@ -470,21 +521,6 @@ section h2 {
     margin-top: 8px;
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .scientist-comment {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .scientist-photo {
-        width: 60px;
-        height: 60px;
-    }
-}
 /* ================================
    РЕГИОНЫ О НАС - 3 ВИДЕО
 ================================ */
@@ -544,18 +580,7 @@ section h2 {
     border: none;
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .regions-video {
-        padding: 15px;
-    }
-    
-    .video-label {
-        font-size: 13px;
-    }
-}
+
 /* ================================
    ПРОДУКЦИЯ - СЕТКА
 ================================ */
@@ -1164,24 +1189,7 @@ footer .container p {
     border-radius: 12px;
     display: block;
 }
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .video-grid-page {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .video-box {
-        padding: 30px 25px;
-        margin: 20px 15px;
-    }
-    
-    .video-box h2 {
-        font-size: 28px;
-    }
-}
+
 
 /* ================================
    СТРАНИЦА ДОСТИЖЕНИЙ
@@ -1288,24 +1296,6 @@ footer .container p {
 }
 
 /* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .achievements-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    .achievements-box {
-        padding: 30px 25px;
-        margin: 20px 15px;
-    }
-    
-    .achievements-box h2 {
-        font-size: 28px;
-    }
-}
-/* ================================
    СТРАНИЦА МУЗЕЙ
 ================================ */
 .page-museum {
@@ -1361,23 +1351,6 @@ footer .container p {
     border-radius: 16px;
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .museum-box {
-        padding: 30px 25px;
-        margin: 20px 15px;
-    }
-    
-    .museum-box h2 {
-        font-size: 28px;
-    }
-    
-    .museum-box p {
-        font-size: 15px;
-    }
-}
 /* ================================
    СТРАНИЦА КОНТАКТЫ
 ================================ */
@@ -1493,36 +1466,7 @@ footer .container p {
     border: none;
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .contacts-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .contacts-box {
-        padding: 30px 25px;
-        margin: 20px 15px;
-    }
-    
-    .contacts-box h2 {
-        font-size: 28px;
-    }
-    
-    .contacts-map {
-        min-height: 300px;
-    }
-    
-    .map-wrapper {
-        min-height: 300px;
-    }
-    
-    .map-wrapper iframe {
-        min-height: 300px;
-    }
-}
+
 /* ================================
    ПОДВАЛ (КОМПАКТНЫЙ И КРАСИВЫЙ)
 ================================ */
@@ -1619,29 +1563,6 @@ footer {
     opacity: 1;
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        text-align: center;
-        max-width: 100%;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-    
-    .rating-block {
-        justify-content: center;
-    }
-    
-    .footer-col h4 {
-        text-align: center;
-    }
-}
 /* ================================
    КНОПКА ОФОРМИТЬ ЗАКАЗ (УМЕНЬШЕННАЯ)
 ================================ */
@@ -1818,16 +1739,260 @@ footer {
     }
 }
 
-/* ================================
-   АДАПТИВ
-================================ */
-@media (max-width: 600px) {
-    .modal-content {
-        padding: 25px 20px;
-        margin: 10% auto;
+/* =================================
+   ГЛАВНЫЙ АДАПТИВ
+================================= */
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
     }
-    
-    .modal-content h2 {
-        font-size: 22px;
+
+    .container {
+        width: 94%;
+    }
+
+    /* Шапка */
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .logo-img {
+        height: 70px;
+    }
+
+    /* Меню */
+    .nav {
+        width: 100%;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        gap: 18px;
+        padding-bottom: 10px;
+        margin-left: 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav a {
+        flex: 0 0 auto;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        height: auto;
+        min-height: 420px;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        margin-left: 0;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+        margin-left: 0;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero p br {
+        display: none;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn,
+    .btn-secondary {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    /* Видео + текст */
+    .welcome-content {
+        flex-direction: column;
+    }
+
+    .video-wrapper {
+        flex: none;
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+
+    .welcome-text p {
+        text-align: left;
+    }
+
+    /* Карточки */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    /* Полезное */
+    .useful-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .blag {
+        text-align: center;
+    }
+
+    .blag img {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    /* Учёные */
+    .scientist-comment {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .scientist-text p,
+    .scientist-text .quote {
+        text-align: left;
+    }
+
+    /* Продукция */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card .product-image {
+        height: 100px;
+    }
+
+    /* Страницы */
+    .about-box,
+    .video-box,
+    .achievements-box,
+    .museum-box,
+    .contacts-box {
+        padding: 25px 20px;
+        margin: 15px 0;
+    }
+
+    .about-box h2,
+    .video-box h2,
+    .achievements-box h2,
+    .museum-box h2,
+    .contacts-box h2 {
+        font-size: 28px;
+    }
+
+    /* Карта */
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Документы */
+    .product-docs-images {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .doc-image-item,
+    .doc-image-item:first-child,
+    .doc-image-item:last-child {
+        text-align: center;
+    }
+
+    /* Видео и достижения */
+    .video-grid-page,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Футер */
+@media (max-width: 768px) {
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: start;
+        text-align: center;
+    }
+
+    .footer-col {
+        min-width: 0;
+    }
+
+    .footer-col h4 {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .footer-col p {
+        font-size: 11px;
+        line-height: 1.35;
+        margin-bottom: 3px;
+        word-break: break-word;
+    }
+
+    /* Соцсети */
+    .social-icons {
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .social-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icon img {
+        width: 32px;
+        height: 32px;
+    }
+}
+}
+
+/* Очень маленькие телефоны */
+@media (max-width: 480px) {
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    section h2 {
+        font-size: 24px;
     }
 }
